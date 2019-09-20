@@ -30,7 +30,7 @@ public class FrontController extends DefaultServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+			response.addHeader("Access-Control-Allow-Origin", "*");
 		String path = request.getRequestURI().substring(request.getContextPath().length());
 		
 			if(path.startsWith("/static/")) {
@@ -44,17 +44,17 @@ public class FrontController extends DefaultServlet {
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		response.addHeader("Access-Control-Allow-Origin", "*");
 			rh.processPost(request, response);
 	}
 	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		rh.processPut(request, response);
 	}
 	
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		response.addHeader("Access-Control-Allow-Origin", "*");
 		rh.processDelete(request, response);
 	}
 
