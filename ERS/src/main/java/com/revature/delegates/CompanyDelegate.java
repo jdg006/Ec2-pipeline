@@ -21,6 +21,7 @@ public class CompanyDelegate {
 		
 		try(PrintWriter pw = response.getWriter()){
 			pw.write(new ObjectMapper().writeValueAsString(companies));
+			response.addHeader("Access-Control-Allow-Origin", "*");
 		}
 	}
 	
