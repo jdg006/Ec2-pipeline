@@ -94,8 +94,6 @@ function sendAjaxGet(url, callback){
 		}
 	}
 
-	xhr.setRequestHeader("Access-Control-Allow-Origin","*");
-	
 	xhr.send();
 }
 
