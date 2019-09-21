@@ -154,7 +154,7 @@ function setEmployee(employeeJSON){
 function submitReimbReq(){
 	
 	let xhr= new XMLHttpRequest();
-	let url = "http://localhost:8080/ERS/new_reimbursement";
+	let url = "/ERS/new_reimbursement";
 	let amount = document.getElementById("amount").value; 
 	let date = document.getElementById("date").value;
 	let reason = document.getElementById("reason").value;
