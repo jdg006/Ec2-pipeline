@@ -1,5 +1,5 @@
 let token = sessionStorage.getItem("token");
-let getUrl = "http://localhost:8080/ERS/api/companies";
+let getUrl = "/ERS/api/companies";
 
 document.getElementById("nav-emp").addEventListener("click", navEmp);
 document.getElementById("nav-man").addEventListener("click", navMan);
