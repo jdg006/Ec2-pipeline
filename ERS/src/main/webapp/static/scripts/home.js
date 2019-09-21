@@ -20,17 +20,17 @@ function navEmp(){
 	
 
 	if(permissionLevel == 0){
-		window.location.href = "http://localhost:8080/ERS/employee_home";
+		window.location.href = "/ERS/employee_home";
 	}
 	else if(permissionLevel == 1){
-		window.location.href = "http://localhost:8080/ERS/all_employees";
+		window.location.href = "/ERS/all_employees";
 	}
 	else if(permissionLevel == 2){
-		window.location.href = "http://localhost:8080/ERS/all_employees";
+		window.location.href = "/ERS/all_employees";
 	}
 	else{
 		alert("You are not signed in. Log in or create an account.");
-		window.location.href = "http://localhost:8080/ERS/home";
+		window.location.href = "/ERS/home";
 	}
 }
 function navMan(){
@@ -47,17 +47,17 @@ function navMan(){
 	
 	if(permissionLevel == 0){
 		alert("You do not have access to manager pages.");
-		window.location.href = "http://localhost:8080/ERS/employee_home";
+		window.location.href = "/ERS/employee_home";
 	}
 	else if(permissionLevel == 1){
-		window.location.href = "http://localhost:8080/ERS/manager_home";
+		window.location.href = "/ERS/manager_home";
 	}
 	else if(permissionLevel == 2){
-		window.location.href = "http://localhost:8080/ERS/all_managers";
+		window.location.href = "/ERS/all_managers";
 	}
 	else{
 		alert("You are not signed in. Log in or create an account.");
-		window.location.href = "http://localhost:8080/ERS/home";
+		window.location.href = "/ERS/home";
 	}
 }
 function navAdmin(){
@@ -73,18 +73,18 @@ let permissionLevel;
 	}
 	if(permissionLevel == 0){
 		alert("You do not have access to admin pages.");
-		window.location.href = "http://localhost:8080/ERS/employee_home";
+		window.location.href = "/ERS/employee_home";
 	}
 	else if(permissionLevel == 1){
 		alert("You do not have access to admin pages.");
-		window.location.href = "http://localhost:8080/ERS/manager_home";
+		window.location.href = "/ERS/manager_home";
 	}
 	else if(permissionLevel == 2){
-		window.location.href = "http://localhost:8080/ERS/administrator_home";
+		window.location.href = "/ERS/administrator_home";
 	}
 	else{
 		alert("You are not signed in. Log in or create an account.");
-		window.location.href = "http://localhost:8080/ERS/home";
+		window.location.href = "/ERS/home";
 	}
 }
 
@@ -101,17 +101,17 @@ let permissionLevel;
 	}
 	if(permissionLevel == 0){
 		alert("You do not have access to company pages.");
-		window.location.href = "http://localhost:8080/ERS/employee_home";
+		window.location.href = "/ERS/employee_home";
 	}
 	else if(permissionLevel == 1){
 		alert("You do not have access to company pages.");
-		window.location.href = "http://localhost:8080/ERS/manager_home";
+		window.location.href = "/ERS/manager_home";
 	}
 	else if(permissionLevel == 2){
-		window.location.href = "http://localhost:8080/ERS/my_company";
+		window.location.href = "/ERS/my_company";
 	}
 	else{
-		window.location.href = "http://localhost:8080/ERS/companie_home";
+		window.location.href = "/ERS/companie_home";
 	}
 }
 
@@ -125,7 +125,7 @@ function logout(){
 
 function requestLogin(){
 	
-	let url = "http://localhost:8080/ERS/login";
+	let url = "/ERS/login";
 	let xhr = new XMLHttpRequest();
 	
 	xhr.open("POST", url);
@@ -137,16 +137,16 @@ function requestLogin(){
 			sessionStorage.setItem("token", authorization);
 			let tokenArray = authorization.split(":");
 			if(tokenArray[1] == 0){
-				window.location.href = "http://localhost:8080/ERS/employee_home";
+				window.location.href = "/ERS/employee_home";
 			}
 			else if(tokenArray[1] == 1){
-				window.location.href = "http://localhost:8080/ERS/manager_home";
+				window.location.href = "/ERS/manager_home";
 			}
 			else if(tokenArray[1] == 2){
-				window.location.href = "http://localhost:8080/ERS/administrator_home";
+				window.location.href = "/ERS/administrator_home";
 			}
 			else{
-				window.location.href = "http://localhost:8080/ERS/home";
+				window.location.href = "/ERS/home";
 			}
 			
 		}
