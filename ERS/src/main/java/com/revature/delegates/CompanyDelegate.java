@@ -23,6 +23,7 @@ public class CompanyDelegate {
 			pw.write(new ObjectMapper().writeValueAsString(companies));
 			response.addHeader("Access-Control-Allow-Origin", "*");
 			response.addHeader("Access-Control-Allow-Methods","GET, OPTIONS, HEAD, PUT, POST");
+			System.out.println(response.containsHeader("Access-Control-Allow-Origin"));
 		}
 	}
 	
